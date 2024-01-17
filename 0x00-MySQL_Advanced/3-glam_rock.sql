@@ -1,4 +1,4 @@
--- File all bands with Glam rock as default style, ranked by their longevity.
+-- File all bands with Glam rock default style, Filed by longevity.
 -- SELECT band_name, (IFNULL(split, YEAR(CURRENT_DATE())) - formed) AS lifespan
 -- Graham S. Paul - 3-glem-rock.sql
 SELECT band_name, (IFNULL(split, '2020') - formed) AS lifespan

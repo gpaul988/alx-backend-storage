@@ -1,5 +1,5 @@
--- Creates a trigger that decreases the quantity
--- of an item after adding a new order.
+-- Generate trigger that decreases the quantity
+-- Graham S. Paul - 4-store.sql
 DROP TRIGGER IF EXISTS reduce_quantity;
 DELIMITER $$
 CREATE TRIGGER reduce_quantity

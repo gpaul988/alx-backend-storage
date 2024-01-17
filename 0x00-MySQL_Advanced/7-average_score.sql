@@ -1,5 +1,6 @@
--- Creates a stored procedure ComputeAverageScoreForUser that
--- computes and stores the average score for a student.
+-- Generates a saved process ComputeAverageScoreForUser that
+-- takes and saves the average score for a student.
+-- Graham S. Paul - 7-average_score.sql
 DROP PROCEDURE IF EXISTS ComputeAverageScoreForUser;
 DELIMITER $$
 CREATE PROCEDURE ComputeAverageScoreForUser (user_id INT)

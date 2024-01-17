@@ -1,4 +1,4 @@
--- Generate a table with unique clients.
+-- Generate table with unique clients.
 -- Graham S. Paul - 1-country_users.sql
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (

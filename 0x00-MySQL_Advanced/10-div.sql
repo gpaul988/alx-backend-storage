@@ -1,5 +1,6 @@
--- creates a function SafeDiv that divides (and returns) the first
--- by the second number or returns 0 if the second number is equal to 0.
+-- Generates a purpose for SafeDiv that divides the first by the second
+-- number or retrieves 0 if the second number is equal to 0.
+-- Graham S. Paul - 10-div.sql
 DROP FUNCTION IF EXISTS SafeDiv;
 DELIMITER $$
 CREATE FUNCTION SafeDiv (a INT, b INT)

@@ -1,5 +1,5 @@
 -- Generates a svaed procedure for  ComputeAverageWeightedScoreForUser that
--- sums up  and saves the average weighted score for a student.
+-- sums up and saves the average weighted score for a student.
 -- Graham S. Paul - 100-average_weighted_score.sql
 DROP PROCEDURE IF EXISTS ComputeAverageWeightedScoreForUser;
 DELIMITER $$

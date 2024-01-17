@@ -1,5 +1,6 @@
--- Creates a view need_meeting that lists all students that have a score
--- under 80 (strict) and no last_meeting or more than 1 month.
+-- Generate an insight need_meeting that lists all students that have a score
+-- below 80 (strict) and no last_meeting or more than 1 month.
+-- Graham S. Paul - 11-need_meeting.sql
 DROP VIEW IF EXISTS need_meeting;
 CREATE VIEW need_meeting AS
     SELECT name

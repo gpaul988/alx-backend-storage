@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-'''Task 10's module.
+''' Graham S. Paul - 10-update_topics.py
 '''
 
 
 def update_topics(mongo_collection, name, topics):
-    '''Changes all topics of a collection's document based on the name.
+    ''' Substitutes every topics of a collection's document based on the name.
     '''
     mongo_collection.update_many(
         {'name': name},

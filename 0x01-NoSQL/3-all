@@ -1,2 +1,3 @@
-// Lists all documents in the school collection.
+// file all documents in the school collection.
+// Graham S. Paul - 3-all
 db.school.find().forEach(printjson);

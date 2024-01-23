@@ -1,2 +1,3 @@
-// Counts the documents in the school collection.
+// Sums the documents in the school collection.
+// Graham S. Paul - 5-count
 db.school.find().count();

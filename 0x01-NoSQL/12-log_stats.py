@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-'''Task 12's module.
+''' Graham S. Paul (12-log_stats.py)
 '''
 from pymongo import MongoClient
 
 
 def print_nginx_request_logs(nginx_collection):
-    '''Prints stats about Nginx request logs.
+    ''' Pulls stats about Nginx request logs.
     '''
     print('{} logs'.format(nginx_collection.count_documents({})))
     print('Methods:')
@@ -20,7 +20,7 @@ def print_nginx_request_logs(nginx_collection):
 
 
 def run():
-    '''Provides some stats about Nginx logs stored in MongoDB.
+    '''Supply some stats about Nginx logs stored in MongoDB.
     '''
     client = MongoClient('mongodb://127.0.0.1:27017')
     print_nginx_request_logs(client.logs.nginx)

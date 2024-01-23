@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''Task 8's module.
+''' Graham S. Paul - 8-all.py
 '''
 
 

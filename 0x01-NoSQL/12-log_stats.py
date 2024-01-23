@@ -5,7 +5,7 @@ from pymongo import MongoClient
 
 
 def provides_stats():
-    """ Provides Stats Function """
+    """ givess Stats Function """
     client = MongoClient('mongodb://127.0.0.1:27017')
     db = client.logs.nginx
 

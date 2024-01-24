@@ -1,22 +1,28 @@
 #!/usr/bin/env python3
-'''Graham S. Paul (102-log_stats.py)
-'''
+""" Improve 12-log_stats.py by adding the top 10 of the most present
+    IPs in the collection nginx of the database logs
+"""
 from pymongo import MongoClient
+from collections import Counter
 
 
-def print_nginx_request_logs(nginx_collection):
-    '''Pulls stats about Nginx request logs.
-    '''
-    print('{} logs'.format(nginx_collection.count_documents({})))
-    print('Methods:')
+def provides_stats():
+    """ Provides Stats Function """
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    db = client.logs.nginx
+
+    print(f"{db.count_documents({})} logs")
+    print("Methods:")
+
     methods = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
+
     for method in methods:
         req_count = len(list(nginx_collection.find({'method': method})))
-        print(f'\tmethod {method}: {req_count}')
+        print('\tmethod {}: {}'.format(method, req_count))
     status_checks_count = len(list(
         nginx_collection.find({'method': 'GET', 'path': '/status'})
     ))
-    print(f'{status_checks_count} status check')
+    print('{} status check'.format(status_checks_count))
 
 
 def print_top_ips(server_collection):
@@ -39,7 +45,7 @@ def print_top_ips(server_collection):
     for request_log in request_logs:
         ip = request_log['_id']
         ip_requests_count = request_log['totalRequests']
-        print(f'\t{ip}: {ip_requests_count}')
+        print('\t{}: {}'.format(ip, ip_requests_count))
 
 
 def run():

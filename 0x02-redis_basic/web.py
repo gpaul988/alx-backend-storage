@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Grahm S. Paul (web.py)
 """ module with tools for request caching and tracking.
 """
 import redis

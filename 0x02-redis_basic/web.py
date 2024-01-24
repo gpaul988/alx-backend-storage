@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Graham S. Paul (web.py)
 
 import requests
 import time

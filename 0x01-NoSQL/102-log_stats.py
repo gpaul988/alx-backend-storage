@@ -12,11 +12,11 @@ def print_nginx_request_logs(nginx_collection):
     methods = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
     for method in methods:
         req_count = len(list(nginx_collection.find({'method': method})))
-        print('\tmethod {}: {}'.format(method, req_count))
+        print(f'\tmethod {method}: {req_count}')
     status_checks_count = len(list(
         nginx_collection.find({'method': 'GET', 'path': '/status'})
     ))
-    print('{} status check'.format(status_checks_count))
+    print(f'{status_checks_count} status check')
 
 
 def print_top_ips(server_collection):
@@ -39,7 +39,7 @@ def print_top_ips(server_collection):
     for request_log in request_logs:
         ip = request_log['_id']
         ip_requests_count = request_log['totalRequests']
-        print('\t{}: {}'.format(ip, ip_requests_count))
+        print(f'\t{ip}: {ip_requests_count}')
 
 
 def run():
